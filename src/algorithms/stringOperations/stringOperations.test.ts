@@ -6,7 +6,7 @@ import {
     isPalindrome,
     isAnagram,
     isAnagramOptimized,
-} from './stringManipulations';
+} from './stringOperations';
 
 /*----------------------------------------------------------------
 The removeDuplicateCharacters

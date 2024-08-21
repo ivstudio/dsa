@@ -1,1 +1,1 @@
-export * from './stringManipulations';
+export * from './stringOperations';
