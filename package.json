@@ -3,7 +3,7 @@
     "author": "Ignacio Villamar",
     "license": "ISC",
     "version": "1.0.0",
-    "description": "",
+    "description": "Data Structures and Algorithms test environment",
     "main": "index.js",
     "scripts": {
         "test": "jest",
