@@ -7,10 +7,11 @@ This repository provides a test environment and documentation for JavaScript dat
 ### Table of Contents
 
 - Algorithms
+  - [Array Operations](/src/algorithms/arraysOperations/)
+  - [Capitalize](/src/algorithms/capitalize/)
+  - [FizzBuzz](/src/algorithms/fizzBuzz/)
   - [Sorting](/src/algorithms/sorting/)
   - [String Operations](/src/algorithms/stringOperations/)
-  - [Array Operations](/src/algorithms/arraysOperations/)
-  - [FizzBuzz](/src/algorithms/fizzBuzz/)
 
 - Data Structures
   - [Queue](/src/dataStructures/queue/)
