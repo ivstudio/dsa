@@ -10,6 +10,8 @@ This repository provides a test environment and documentation for JavaScript dat
   - [Sorting](/src/algorithms/sorting/)
   - [String Operations](/src/algorithms/stringOperations/)
   - [Array Operations](/src/algorithms/arraysOperations/)
+  - [FizzBuzz](/src/algorithms/fizzBuzz/)
+
 - Data Structures
   - [Queue](/src/dataStructures/queue/)
 
