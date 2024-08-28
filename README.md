@@ -12,6 +12,7 @@ This repository provides a test environment and documentation for JavaScript dat
   - [FizzBuzz](/src/algorithms/fizzBuzz/)
   - [Sorting](/src/algorithms/sorting/)
   - [String Operations](/src/algorithms/stringOperations/)
+  - [Two Sum](/src/algorithms/twoSum)
 
 - Data Structures
   - [Queue](/src/dataStructures/queue/)
