@@ -16,6 +16,7 @@ This repository provides a test environment and documentation for JavaScript dat
 
 - Data Structures
   - [Queue](/src/dataStructures/queue/)
+  - [Linked List](/src/dataStructures/linkedList)
 
 ### Testing
 
