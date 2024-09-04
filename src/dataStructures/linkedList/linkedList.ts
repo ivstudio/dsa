@@ -17,6 +17,8 @@
     - insertLast: Add a node to the end of the list.
     - size: Return the number of nodes in the list.
     - getFirst: Return the first node.
+    - getLast: Return the last node.
+    - clear: Clear the list
   
     - insert: Insert a node at a specific index.
     - remove: Remove a node from the list.
@@ -84,6 +86,11 @@ class LinkedList<T> {
 
     getLast(): LinkedListNode<T> | null {
         return this.tail;
+    }
+
+    clear() {
+        this.head = null;
+        this.tail = null;
     }
 }
 

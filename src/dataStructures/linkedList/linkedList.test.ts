@@ -127,4 +127,158 @@ describe('LinkedList', () => {
         expect(list.getLast()).not.toBeNull();
         expect(list.getLast()?.data).toBe(30);
     });
+
+    it('clear should remove all nodes from the list', () => {
+        const list = new LinkedList<number>();
+
+        // Insert nodes into the list
+        list.insertFirst(10);
+        list.insertLast(20);
+        list.insertLast(30);
+
+        // Verify the list is not empty
+        expect(list.head).not.toBeNull();
+        expect(list.tail).not.toBeNull();
+        expect(list.head?.data).toBe(10);
+        expect(list.tail?.data).toBe(30);
+
+        // Clear the list
+        list.clear();
+
+        // Verify the list is empty
+        expect(list.head).toBeNull();
+        expect(list.tail).toBeNull();
+    });
+
+    it('removeFirst should handle an empty list', () => {
+        const list = new LinkedList<number>();
+
+        // Verify the list is empty
+        expect(list.head).toBeNull();
+        expect(list.tail).toBeNull();
+
+        // Remove the first node from an empty list
+        list.removeFirst();
+
+        // Verify the list is still empty
+        expect(list.head).toBeNull();
+        expect(list.tail).toBeNull();
+    });
+
+    it('removeFirst should remove the first node from a list with one node', () => {
+        const list = new LinkedList<number>();
+
+        // Insert a node into the list
+        list.insertFirst(10);
+
+        // Verify the list is not empty
+        expect(list.head).not.toBeNull();
+        expect(list.tail).not.toBeNull();
+        expect(list.head?.data).toBe(10);
+        expect(list.tail?.data).toBe(10);
+
+        // Remove the first node
+        list.removeFirst();
+
+        // Verify the list is empty
+        expect(list.head).toBeNull();
+        expect(list.tail).toBeNull();
+    });
+
+    it('removeFirst should remove the first node from a list with multiple nodes', () => {
+        const list = new LinkedList<number>();
+
+        // Insert nodes into the list
+        list.insertFirst(10);
+        list.insertLast(20);
+        list.insertLast(30);
+
+        // Verify the list is not empty
+        expect(list.head).not.toBeNull();
+        expect(list.tail).not.toBeNull();
+        expect(list.head?.data).toBe(10);
+        expect(list.tail?.data).toBe(30);
+
+        // Remove the first node
+        list.removeFirst();
+
+        // Verify the first node is removed
+        expect(list.head).not.toBeNull();
+        expect(list.head?.data).toBe(20);
+        expect(list.tail?.data).toBe(30);
+
+        // Remove the first node again
+        list.removeFirst();
+
+        // Verify the first node is removed
+        expect(list.head).not.toBeNull();
+        expect(list.head?.data).toBe(30);
+        expect(list.tail?.data).toBe(30);
+    });
+
+    it('removeLast should handle an empty list', () => {
+        const list = new LinkedList<number>();
+
+        // Verify the list is empty
+        expect(list.head).toBeNull();
+        expect(list.tail).toBeNull();
+
+        // Remove the last node from an empty list
+        list.removeLast();
+
+        // Verify the list is still empty
+        expect(list.head).toBeNull();
+        expect(list.tail).toBeNull();
+    });
+
+    it('removeLast should remove the last node from a list with one node', () => {
+        const list = new LinkedList<number>();
+
+        // Insert a node into the list
+        list.insertFirst(10);
+
+        // Verify the list is not empty
+        expect(list.head).not.toBeNull();
+        expect(list.tail).not.toBeNull();
+        expect(list.head?.data).toBe(10);
+        expect(list.tail?.data).toBe(10);
+
+        // Remove the last node
+        list.removeLast();
+
+        // Verify the list is empty
+        expect(list.head).toBeNull();
+        expect(list.tail).toBeNull();
+    });
+
+    it('removeLast should remove the last node from a list with multiple nodes', () => {
+        const list = new LinkedList<number>();
+
+        // Insert nodes into the list
+        list.insertFirst(10);
+        list.insertLast(20);
+        list.insertLast(30);
+
+        // Verify the list is not empty
+        expect(list.head).not.toBeNull();
+        expect(list.tail).not.toBeNull();
+        expect(list.head?.data).toBe(10);
+        expect(list.tail?.data).toBe(30);
+
+        // Remove the last node
+        list.removeLast();
+
+        // Verify the last node is removed
+        expect(list.head).not.toBeNull();
+        expect(list.head?.data).toBe(10);
+        expect(list.tail?.data).toBe(20);
+
+        // Remove the last node again
+        list.removeLast();
+
+        // Verify the last node is removed
+        expect(list.head).not.toBeNull();
+        expect(list.head?.data).toBe(10);
+        expect(list.tail?.data).toBe(10);
+    });
 });
