@@ -18,7 +18,9 @@
     - size: Return the number of nodes in the list.
     - getFirst: Return the first node.
     - getLast: Return the last node.
-    - clear: Clear the list
+    - clear: Clear the List
+    - removeFirst: Remove the first node.
+    - removeLast: Remove the last node.
   
     - insert: Insert a node at a specific index.
     - remove: Remove a node from the list.
@@ -91,6 +93,39 @@ class LinkedList<T> {
     clear() {
         this.head = null;
         this.tail = null;
+    }
+
+    removeFirst() {
+        if (!this.head) {
+            return;
+        }
+
+        if (this.head === this.tail) {
+            this.head = null;
+            this.tail = null;
+            return;
+        }
+
+        this.head = this.head.next;
+    }
+
+    removeLast() {
+        if (!this.head) {
+            return;
+        }
+
+        if (this.head === this.tail) {
+            this.head = null;
+            this.tail = null;
+            return;
+        }
+
+        let current = this.head;
+        while (current.next !== this.tail) {
+            current = current.next!;
+        }
+        current.next = null;
+        this.tail = current;
     }
 }
 
