@@ -8,6 +8,7 @@ This repository provides a test environment and documentation for JavaScript dat
 
 - Algorithms
   - [Array Operations](/src/algorithms/arraysOperations/)
+  - [Anagram](/src/algorithms/anagram)
   - [Capitalize](/src/algorithms/capitalize/)
   - [FizzBuzz](/src/algorithms/fizzBuzz/)
   - [Longest Substring](/src/algorithms/longestSubstring)
