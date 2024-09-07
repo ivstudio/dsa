@@ -17,8 +17,10 @@ This repository provides a test environment and documentation for JavaScript dat
   - [Longest Substring](/src/algorithms/longestSubstring)
 
 - Data Structures
-  - [Queue](/src/dataStructures/queue/)
+  - [Add Two Numbers Linked Lists](/src/dataStructures/addTwoNumbers/)
   - [Linked List](/src/dataStructures/linkedList)
+  - [Queue](/src/dataStructures/queue/)
+
 
 ### Testing
 
