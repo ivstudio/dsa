@@ -10,9 +10,11 @@ This repository provides a test environment and documentation for JavaScript dat
   - [Array Operations](/src/algorithms/arraysOperations/)
   - [Capitalize](/src/algorithms/capitalize/)
   - [FizzBuzz](/src/algorithms/fizzBuzz/)
+  - [Longest Substring](/src/algorithms/longestSubstring)
   - [Sorting](/src/algorithms/sorting/)
   - [String Operations](/src/algorithms/stringOperations/)
   - [Two Sum](/src/algorithms/twoSum)
+  - [Longest Substring](/src/algorithms/longestSubstring)
 
 - Data Structures
   - [Queue](/src/dataStructures/queue/)
