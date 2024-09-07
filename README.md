@@ -17,10 +17,10 @@ This repository provides a test environment and documentation for JavaScript dat
   - [Longest Substring](/src/algorithms/longestSubstring)
 
 - Data Structures
-  - [Add Two Numbers Linked Lists](/src/dataStructures/addTwoNumbers/)
   - [Linked List](/src/dataStructures/linkedList)
+    - [Add Two Numbers LL](/src/dataStructures/linkedList/addTwoNumbers/)
+    - [Merge Two Sorted LL](/src/dataStructures/linkedList//mergeTwoSortedLinkedLists/)
   - [Queue](/src/dataStructures/queue/)
-
 
 ### Testing
 
