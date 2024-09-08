@@ -23,28 +23,28 @@ function linkedListToArray(head: LinkedListNode<number> | null): number[] {
 }
 
 describe('mergeTwoLists', () => {
-    test('both lists are empty', () => {
+    it('both lists are empty', () => {
         const l1 = createLinkedList([]);
         const l2 = createLinkedList([]);
         const merged = mergeTwoLists(l1, l2);
         expect(linkedListToArray(merged)).toEqual([]);
     });
 
-    test('one list is empty, the other is not', () => {
+    it('one list is empty, the other is not', () => {
         const l1 = createLinkedList([1, 3, 5]);
         const l2 = createLinkedList([]);
         const merged = mergeTwoLists(l1, l2);
         expect(linkedListToArray(merged)).toEqual([1, 3, 5]);
     });
 
-    test('both lists have elements', () => {
+    it('both lists have elements', () => {
         const l1 = createLinkedList([1, 3, 5]);
         const l2 = createLinkedList([2, 4, 6]);
         const merged = mergeTwoLists(l1, l2);
         expect(linkedListToArray(merged)).toEqual([1, 2, 3, 4, 5, 6]);
     });
 
-    test('lists with overlapping elements', () => {
+    it('lists with overlapping elements', () => {
         const l1 = createLinkedList([1, 2, 4]);
         const l2 = createLinkedList([1, 3, 4]);
         const merged = mergeTwoLists(l1, l2);
