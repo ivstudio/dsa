@@ -28,21 +28,21 @@ export function lengthOfLongestSubstring(s: string): number {
         return 0;
     }
 
-    const seen = new Map<string, number>();
-    let left = 0;
-    let longest = 0;
+    const charIndexMap = new Map<string, number>();
+    let pointLeft = 0;
+    let maxLength = 0;
 
-    for (let right = 0; right < s.length; right++) {
-        const currentChar = s[right];
-        const prevSeenCharIndex = seen.get(currentChar);
+    for (let pointRight = 0; pointRight < s.length; pointRight++) {
+        const currentChar = s[pointRight];
+        const prevIndex = charIndexMap.get(currentChar);
 
-        if (prevSeenCharIndex >= left) {
-            left = prevSeenCharIndex + 1;
+        if (prevIndex >= pointLeft) {
+            pointLeft = prevIndex + 1;
         }
 
-        seen.set(currentChar, right);
-        longest = Math.max(longest, right - left + 1);
+        charIndexMap.set(currentChar, pointRight);
+        maxLength = Math.max(maxLength, pointRight - pointLeft + 1);
     }
 
-    return longest;
+    return maxLength;
 }
