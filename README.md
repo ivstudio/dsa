@@ -8,6 +8,8 @@ This repository provides a test environment and documentation for JavaScript dat
 
 - Algorithms
   - [Array Operations](/src/algorithms/arraysOperations/)
+    - [Merge Sorted Array](/src/algorithms/arraysOperations/mergeSortedArray/)
+    - [Remove Duplicate Objects](/src/algorithms/arraysOperations/removeDuplicateObjects/)
   - [Anagram](/src/algorithms/anagram)
   - [Capitalize](/src/algorithms/capitalize/)
   - [FizzBuzz](/src/algorithms/fizzBuzz/)
