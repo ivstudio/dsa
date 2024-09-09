@@ -1,4 +1,3 @@
-// mergeSortedArray.test.ts
 import { mergeSortedArray } from './mergeSortedArray';
 
 describe('mergeSortedArray', () => {
