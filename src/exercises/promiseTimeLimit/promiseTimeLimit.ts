@@ -9,9 +9,13 @@
       the time-limited function should resolve with the result.
     - If the execution of the fn exceeds the time limit, the time 
       limited function should reject with the string "Time Limit Exceeded".
+    
+    Constraints:
+        - 0 <= inputs.length <= 10
+        - 0 <= t <= 1000
+        - fn returns a promise  
 
     Example 1:
-
     Input: 
     fn = async (n) => { 
       await new Promise(res => setTimeout(res, 100)); 
@@ -35,7 +39,6 @@
     The provided function is set to resolve after 100ms. However, the time limit is set to 50ms. It rejects at t=50ms because the time limit was reached.
 
     Example 2:
-
     Input: 
     fn = async (n) => { 
       await new Promise(res => setTimeout(res, 100)); 
@@ -48,7 +51,6 @@
     The function resolved 5 * 5 = 25 at t=100ms. The time limit is never reached.
 
     Example 3:
-
     Input: 
     fn = async (a, b) => { 
       await new Promise(res => setTimeout(res, 120)); 
@@ -61,7 +63,6 @@
     The function resolved 5 + 10 = 15 at t=120ms. The time limit is never reached.
 
     Example 4:
-
     Input: 
     fn = async () => { 
       throw "Error";
@@ -73,11 +74,7 @@
     The function immediately throws an error.
  
 
-    Constraints:
 
-    - 0 <= inputs.length <= 10
-    - 0 <= t <= 1000
-    - fn returns a promise
 */
 
 export const timeLimit = <T extends (...args: any[]) => Promise<any>>(
