@@ -26,6 +26,9 @@ This repository provides a test environment and documentation for JavaScript dat
     - [Merge Two Sorted LL](/src/dataStructures/linkedList//mergeTwoSortedLinkedLists/)
   - [Queue](/src/dataStructures/queue/)
 
+- Exercises
+  - [Promise Time Limit](/src/exercises/promiseTimeLimit)  
+
 ### Testing
 
 I’m using [Jest](https://jestjs.io/) to test the solutions.
