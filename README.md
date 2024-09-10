@@ -12,6 +12,7 @@ This repository provides a test environment and documentation for JavaScript dat
     - [Remove Duplicate Objects](/src/algorithms/arraysOperations/removeDuplicateObjects/)
   - [Anagram](/src/algorithms/anagram)
   - [Capitalize](/src/algorithms/capitalize/)
+  - [Fibonacci](/src/algorithms/fibonacci)
   - [FizzBuzz](/src/algorithms/fizzBuzz/)
   - [Longest Substring](/src/algorithms/longestSubstring)
   - [Sorting](/src/algorithms/sorting/)
