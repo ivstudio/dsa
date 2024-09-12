@@ -15,6 +15,7 @@
         - 0 <= t <= 1000
         - fn returns a promise  
 
+    ----------------------------------------------------------------
     Example 1:
     Input: 
     fn = async (n) => { 
@@ -24,6 +25,7 @@
     inputs = [5]
     t = 50
     Output: {"rejected":"Time Limit Exceeded","time":50}
+
     Explanation:
     const limited = timeLimit(fn, t)
     const start = performance.now()
@@ -37,7 +39,8 @@
     console.log(result) // Output
 
     The provided function is set to resolve after 100ms. However, the time limit is set to 50ms. It rejects at t=50ms because the time limit was reached.
-
+    
+    ----------------------------------------------------------------
     Example 2:
     Input: 
     fn = async (n) => { 
@@ -47,9 +50,11 @@
     inputs = [5]
     t = 150
     Output: {"resolved":25,"time":100}
+
     Explanation:
     The function resolved 5 * 5 = 25 at t=100ms. The time limit is never reached.
 
+    ----------------------------------------------------------------
     Example 3:
     Input: 
     fn = async (a, b) => { 
@@ -59,9 +64,11 @@
     inputs = [5,10]
     t = 150
     Output: {"resolved":15,"time":120}
+
     Explanation:
     The function resolved 5 + 10 = 15 at t=120ms. The time limit is never reached.
 
+    ----------------------------------------------------------------
     Example 4:
     Input: 
     fn = async () => { 
@@ -70,6 +77,7 @@
     inputs = []
     t = 1000
     Output: {"rejected":"Error","time":0}
+    
     Explanation:
     The function immediately throws an error.
  

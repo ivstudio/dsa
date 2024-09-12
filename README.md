@@ -1,8 +1,8 @@
-# JavaScript Data Structures and Algorithms Test Environment
+# JavaScript Data Structures and Algorithms (DSA)
 
 ## Overview
 
-This repository provides a test environment and documentation for JavaScript data structures and algorithms. It includes code implementations, test cases, and utilities to make it easier to write and test solutions effectively.
+This repository is a study and exercise guide for data structures and algorithms (DSA). It features TypeScript code implementations, test cases, and utilities to streamline the process of writing and testing solutions effectively.
 
 ### Table of Contents
 
@@ -18,6 +18,7 @@ This repository provides a test environment and documentation for JavaScript dat
   - [Sorting](/src/algorithms/sorting/)
   - [String Operations](/src/algorithms/stringOperations/)
   - [Two Sum](/src/algorithms/twoSum)
+  - [Palindrome](/src/algorithms/palindrome)
   - [Longest Substring](/src/algorithms/longestSubstring)
 
 - Data Structures
@@ -34,11 +35,10 @@ This repository provides a test environment and documentation for JavaScript dat
 I’m using [Jest](https://jestjs.io/) to test the solutions.
 
 - To run all the tests: `npm run test`
-- To run a single test file: `npm run test name_of_test_file`
 
 ### Folder Structure
 
-This ever-growing project continues to expand and evolve over time. It’s organized by algorithms and data structures, and within those categories, it's sorted by type. All implementations have unit tests associated with the exercise.
+This project will continue to grow and evolve. It is organized by algorithms, data structures, and exercises. Each implementation includes unit tests.
 
 ```bash
 root/
@@ -51,11 +51,15 @@ root/
 │   │   │   └── ...
 │   │   └── .../
 │   ├── dataStructures/
-│       ├── queue/q
-│       │   ├── queue.ts
-│       │   ├── queue.test.js
-│       │   └── ...
-│       └── .../
+│   │    ├── queue/
+│   │    │   ├── queue.ts
+│   │    │   ├── queue.test.js
+│   │    └── ...
+│   ├── exercises/
+│   │    ├── debouce
+│   │    │   ├── debounce.ts
+│   │    │   ├── debounce.test.js
+│   │    └── ...
 ├── package.json
 └── jest.config.js
 ```
