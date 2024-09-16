@@ -7,19 +7,19 @@ This repository is a study and exercise guide for data structures and algorithms
 ### Table of Contents
 
 - Algorithms
+  - [Anagram](/src/algorithms/anagram)
   - [Array Operations](/src/algorithms/arraysOperations/)
     - [Merge Sorted Array](/src/algorithms/arraysOperations/mergeSortedArray/)
     - [Remove Duplicate Objects](/src/algorithms/arraysOperations/removeDuplicateObjects/)
-  - [Anagram](/src/algorithms/anagram)
   - [Capitalize](/src/algorithms/capitalize/)
   - [Fibonacci](/src/algorithms/fibonacci)
   - [FizzBuzz](/src/algorithms/fizzBuzz/)
   - [Longest Substring](/src/algorithms/longestSubstring)
+  - [Palindrome](/src/algorithms/palindrome)
+  - [Reverse String](/src/algorithms/reverseString)
   - [Sorting](/src/algorithms/sorting/)
   - [String Operations](/src/algorithms/stringOperations/)
   - [Two Sum](/src/algorithms/twoSum)
-  - [Palindrome](/src/algorithms/palindrome)
-  - [Longest Substring](/src/algorithms/longestSubstring)
 
 - Data Structures
   - [Linked List](/src/dataStructures/linkedList)
