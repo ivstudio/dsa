@@ -21,15 +21,15 @@
     Output: [4,9,9,49,121]
 
  * Explanation:
- * - We use a two-pointer approach to solve this problem efficiently.
- * - Initialize two pointers: `left` at the start (0) and `right` at the end (nums.length - 1) of the array.
- * - Initialize an `index` pointer at the end of the result array.
- * - Compare the absolute values of the elements at the `left` and `right` pointers.
- * - Square the larger absolute value and place it at the `index` position in the result array.
- * - Move the pointer (`left` or `right`) corresponding to the larger absolute value inward.
- * - Decrement the `index` pointer.
- * - Continue this process until the `left` pointer exceeds the `right` pointer.
- * - This ensures that the largest squares are placed at the end of the result array, maintaining sorted order.
+    -We use a two-pointer approach to solve this problem efficiently.
+    -Initialize two pointers: `left` at the start (0) and `right` at the end (nums.length - 1) of the array.
+    -Initialize an `index` pointer at the end of the result array.
+    -Compare the absolute values of the elements at the `left` and `right` pointers.
+    -Square the larger absolute value and place it at the `index` position in the result array.
+    -Move the pointer (`left` or `right`) corresponding to the larger absolute value inward.
+    -Decrement the `index` pointer.
+    -Continue this process until the `left` pointer exceeds the `right` pointer.
+    -This ensures that the largest squares are placed at the end of the result array, maintaining sorted order.
  */
 
 export function squaresOfSortedArray(nums: number[]): number[] {
