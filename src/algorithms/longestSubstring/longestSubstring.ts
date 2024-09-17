@@ -17,11 +17,20 @@
     Input: "pwwkew"
     Output: 3
     Explanation: The answer is "wke", with the length of 3.
-*/
 
-// Solution 1
-// Time Complexity: O(n)
-// Space Complexity: O(n)
+   Explanation:
+   - The function uses a sliding window approach to find the 
+     longest substring without repeating characters.
+   - It maintains a map (or dictionary) to store the index of each character.
+   - Two pointers, `pointLeft` and `pointRight`, are used to traverse the string.
+   - `pointRight` expands the window by moving to the right.
+   - If a repeating character is found, `pointLeft` is moved to the right of 
+     the previous index of the repeating character.
+   - The length of the current window is calculated as `pointRight - pointLeft + 1`.
+   - The function keeps track of the maximum length of all windows encountered.
+   - Finally, it returns the length of the longest substring without repeating characters.
+
+*/
 
 export function lengthOfLongestSubstring(s: string): number {
     if (!s) {
