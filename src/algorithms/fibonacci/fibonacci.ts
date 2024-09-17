@@ -11,6 +11,11 @@
     fibonacci(6) => 8
     fibonacci(10) => 55
 
+    Explanation:
+    - The function uses memoization to store the results of previous calculations.
+    - It calculates the n-th Fibonacci number by recursively calling the function with n-1 and n-2.
+    - The function returns the result of the calculation for n.
+
 */
 
 export const fibonacci = (n: number): number => {
