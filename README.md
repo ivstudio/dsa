@@ -11,6 +11,7 @@ This repository is a study and exercise guide for data structures and algorithms
   - [Array Operations](/src/algorithms/arraysOperations/)
     - [Merge Sorted Array](/src/algorithms/arraysOperations/mergeSortedArray/)
     - [Remove Duplicate Objects](/src/algorithms/arraysOperations/removeDuplicateObjects/)
+    - [Squares of Sorted Array](/src/algorithms/squaresOfSortedArray/)
   - [Capitalize](/src/algorithms/capitalize/)
   - [Fibonacci](/src/algorithms/fibonacci)
   - [FizzBuzz](/src/algorithms/fizzBuzz/)
