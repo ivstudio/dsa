@@ -4,6 +4,17 @@
     and for the multiples of 5, it prints "Buzz". 
     For numbers which are multiples of both three and five, 
     it prints "FizzBuzz".
+
+    Example:
+    fizzBuzz(6) => ['1', '2', 'Fizz', '4', 'Buzz', 'Fizz']
+    fizzBuzz(2) => ['1', '2']
+
+    Explanation:
+    - The function loops from 1 to n.
+    - If the number is divisible by 3 and 5, it adds 'FizzBuzz' to the result array.
+    - If the number is divisible by 3, it adds 'Fizz' to the result array.
+    - If the number is divisible by 5, it adds 'Buzz' to the result array.
+    - Otherwise, it adds the number to the result array.
 */
 
 export function fizzBuzz(n: number): string[] {
