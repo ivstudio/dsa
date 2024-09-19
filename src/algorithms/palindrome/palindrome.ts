@@ -31,7 +31,10 @@
 */
 
 export const isPalindrome = (input: string | number): boolean => {
-    const str = input.toString().toLowerCase().split(' ').join('');
+    const str = input
+        .toString()
+        .replace(/[^a-zA-Z0-9]/g, '')
+        .toLowerCase();
 
     let left = 0;
     let right = str.length - 1;
