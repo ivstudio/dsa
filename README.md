@@ -9,6 +9,7 @@ This repository is a study and exercise guide for data structures and algorithms
 - Algorithms
   - [Anagram](/src/algorithms/anagram)
   - [Array Operations](/src/algorithms/arraysOperations/)
+    - [Maximum Average Subarray I](/src/algorithms/maximumAverageSubarray)
     - [Merge Sorted Array](/src/algorithms/arraysOperations/mergeSortedArray/)
     - [Remove Duplicate Objects](/src/algorithms/arraysOperations/removeDuplicateObjects/)
     - [Squares of Sorted Array](/src/algorithms/squaresOfSortedArray/)
