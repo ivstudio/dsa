@@ -45,7 +45,7 @@ Explanation steps:
        the maximum number of consecutive 1s that can be achieved by flipping at most k 0s.
 ----------------------------------------------------------------*/
 
-export function findMaxConsecutiveOnes1(nums: number[], k: number): number {
+export function findMaxConsecutiveOnes(nums: number[], k: number): number {
     let startWindow = 0;
     let maxOnes = 0;
     let zeroCount = 0;
