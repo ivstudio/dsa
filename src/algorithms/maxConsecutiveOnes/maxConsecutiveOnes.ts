@@ -20,36 +20,49 @@
 /*----------------------------------------------------------------
 Explanation steps:
 ----------------------------------------------------------------
-1. Initialize left and right pointers to 0.
-2. Initialize zeroCount to 0.
-3. Iterate through the array.
-4. If the current element is 0, increment zeroCount.
-5. While zeroCount is greater than k, increment left pointer.
-6. Update maxOnes with the maximum of maxOnes and the current window size.
-7. Increment right pointer.
-8. Return maxOnes.
+ 1. Initialization:
+    - startWindow is initialized to 0 to represent the start of the window.
+    - maxOnes is initialized to 0 to keep track of the maximum number of consecutive 1s found.
+    - zeroCount is initialized to 0 to keep track of the number of 0s in the current window.
+ 
+ 2. Iteration:
+    - The endWindow pointer iterates through the array to expand the window.
+ 
+ 3. Counting Zeros:
+    - If nums[endWindow] is 0, increment zeroCount to account for the new 0 in the window.
+ 
+ 4. Adjusting the Window:
+    -  If zeroCount exceeds k, the window is adjusted by moving the startWindow pointer to 
+       the right until zeroCount is less than or equal to k.
+    - If nums[startWindow] is 0, decrement zeroCount because this 0 is no longer in the window.
+ 
+ 5. Updating Maximum:
+    -  The size of the current window is calculated as endWindow - startWindow + 1.
+    -  maxOnes is updated to be the maximum of the current maxOnes and the size of the current window.
+ 
+ 6. Returning Result:
+    -  After the iteration is complete, maxOnes is returned as the result, representing 
+       the maximum number of consecutive 1s that can be achieved by flipping at most k 0s.
 ----------------------------------------------------------------*/
 
-export function findMaxConsecutiveOnes(nums: number[], k: number): number {
-    let left = 0;
-    let right = 0;
+export function findMaxConsecutiveOnes1(nums: number[], k: number): number {
+    let startWindow = 0;
     let maxOnes = 0;
     let zeroCount = 0;
 
-    while (right < nums.length) {
-        if (nums[right] === 0) {
+    for (let endWindow = 0; endWindow < nums.length; endWindow++) {
+        if (nums[endWindow] === 0) {
             zeroCount++;
         }
 
         while (zeroCount > k) {
-            if (nums[left] === 0) {
+            if (nums[startWindow] === 0) {
                 zeroCount--;
             }
-            left++;
+            startWindow++;
         }
 
-        maxOnes = Math.max(maxOnes, right - left + 1);
-        right++;
+        maxOnes = Math.max(maxOnes, endWindow - startWindow + 1);
     }
 
     return maxOnes;
