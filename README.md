@@ -35,6 +35,7 @@ This repository is a study and exercise guide for data structures and algorithms
 - Exercises
   - Closures
     - [Counter](/src/exercises/closures/counter/)
+    - [Interval](/src/exercises/closures/interval/)
   - [Promise Time Limit](/src/exercises/promiseTimeLimit)  
 
 ### Testing
