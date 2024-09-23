@@ -33,6 +33,8 @@ This repository is a study and exercise guide for data structures and algorithms
   - [Queue](/src/dataStructures/queue/)
 
 - Exercises
+  - Closures
+    - [Counter](/src/exercises/closures/counter/)
   - [Promise Time Limit](/src/exercises/promiseTimeLimit)  
 
 ### Testing
