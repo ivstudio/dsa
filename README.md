@@ -16,6 +16,7 @@ This repository is a study and exercise guide for data structures and algorithms
     - [Remove Duplicate Objects](/src/algorithms/arraysOperations/removeDuplicateObjects/)
     - [Running Sum of 1d Array](/src/algorithms/runningSumOf1dArray/)
     - [Squares of Sorted Array](/src/algorithms/squaresOfSortedArray/)
+    - [K Radius Subarray Averages](/src/algorithms/kRadiusSubarrayAverages/)
   - [Capitalize](/src/algorithms/capitalize/)
   - [Fibonacci](/src/algorithms/fibonacci)
   - [FizzBuzz](/src/algorithms/fizzBuzz/)
