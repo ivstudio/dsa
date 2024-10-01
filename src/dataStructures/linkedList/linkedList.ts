@@ -109,7 +109,7 @@ class LinkedList<T> {
         this.head = this.head.next;
     }
 
-    removeLast() {
+    removeLast(): Node | undefined {
         if (!this.head) {
             return;
         }
@@ -120,12 +120,14 @@ class LinkedList<T> {
             return;
         }
 
-        let current = this.head;
-        while (current.next !== this.tail) {
-            current = current.next!;
+        let temp = this.head;
+        let previous = this.head;
+        while (temp.next) {
+            previous = temp;
+            temp = temp.next!;
         }
-        current.next = null;
-        this.tail = current;
+        this.tail = previous;
+        this.tail.next = null;
     }
 }
 

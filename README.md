@@ -14,6 +14,7 @@ This repository is a study and exercise guide for data structures and algorithms
     - [Merge Sorted Array](/src/algorithms/arraysOperations/mergeSortedArray/)
     - [Minimum Value to Get Positive Step by Step Sum](/src/algorithms/minimumValueToGetPositiveStepByStepSum/)
     - [Remove Duplicate Objects](/src/algorithms/arraysOperations/removeDuplicateObjects/)
+    - [Remove Duplicates from Sorted Array](/src/algorithms/removeDuplicatesfromSortedArray/)
     - [Running Sum of 1d Array](/src/algorithms/runningSumOf1dArray/)
     - [Squares of Sorted Array](/src/algorithms/squaresOfSortedArray/)
     - [K Radius Subarray Averages](/src/algorithms/kRadiusSubarrayAverages/)
