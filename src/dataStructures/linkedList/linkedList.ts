@@ -120,13 +120,13 @@ class LinkedList<T> {
             return;
         }
 
-        let temp = this.head;
-        let previous = this.head;
-        while (temp.next) {
-            previous = temp;
-            temp = temp.next!;
+        let current = this.head;
+        let newTail = current;
+        while (current.next) {
+            newTail = current;
+            current = current.next;
         }
-        this.tail = previous;
+        this.tail = newTail;
         this.tail.next = null;
     }
 }
