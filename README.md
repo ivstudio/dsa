@@ -23,6 +23,7 @@ This repository is a study and exercise guide for data structures and algorithms
   - [FizzBuzz](/src/algorithms/fizzBuzz/)
   - [Longest Substring](/src/algorithms/longestSubstring)
   - [Palindrome](/src/algorithms/palindrome)
+  - [Pangram](/src/algorithms/pangram)
   - [Reverse String](/src/algorithms/reverseString)
   - [Sorting](/src/algorithms/sorting/)
   - [String Operations](/src/algorithms/stringOperations/)
