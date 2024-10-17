@@ -3,9 +3,10 @@ class LinkedListNode<T> {
     next: LinkedListNode<T> | null;
     prev: LinkedListNode<T> | null;
 
-    constructor(data: T, next: LinkedListNode<T> | null = null) {
+    constructor(data: T) {
         this.data = data;
-        this.next = next;
+        this.next = null;
+        this.prev = null;
     }
 }
 
