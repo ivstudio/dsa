@@ -27,6 +27,7 @@ This repository is a study and exercise guide for data structures and algorithms
   - [Reverse String](/src/algorithms/reverseString)
   - [Sorting](/src/algorithms/sorting/)
   - [String Operations](/src/algorithms/stringOperations/)
+  - [Missing Number](/src/algorithms/missingNumber)
   - [Two Sum](/src/algorithms/twoSum)
 
 - Data Structures
