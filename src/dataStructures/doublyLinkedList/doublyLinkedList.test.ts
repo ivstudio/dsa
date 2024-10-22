@@ -106,4 +106,59 @@ describe('DoublyLinkedList', () => {
         expect(list.tail).toBeNull();
         expect(list.length).toBe(0);
     });
+
+    it('should correctly update head and tail when shifting multiple nodes', () => {
+        list.push(1);
+        list.push(2);
+        list.push(3);
+        list.shift();
+        expect(list.head?.data).toBe(2);
+        expect(list.tail?.data).toBe(3);
+        expect(list.length).toBe(2);
+        list.shift();
+        expect(list.head?.data).toBe(3);
+        expect(list.tail?.data).toBe(3);
+        expect(list.length).toBe(1);
+        list.shift();
+        expect(list.head).toBeNull();
+        expect(list.tail).toBeNull();
+        expect(list.length).toBe(0);
+    });
+
+    it('should return null when shifting from an empty list', () => {
+        const node = list.shift();
+        expect(node).toBeNull();
+        expect(list.head).toBeNull();
+        expect(list.tail).toBeNull();
+        expect(list.length).toBe(0);
+    });
+
+    it('should remove the first node from a list with one node', () => {
+        list.push(1);
+        const node = list.shift();
+        expect(node?.data).toBe(1);
+        expect(list.head).toBeNull();
+        expect(list.tail).toBeNull();
+        expect(list.length).toBe(0);
+    });
+
+    it('should handle shifting from a list with duplicate values', () => {
+        list.push(1);
+        list.push(2);
+        list.push(2);
+        list.push(3);
+        list.shift();
+        expect(list.head?.data).toBe(2);
+        expect(list.length).toBe(3);
+        list.shift();
+        expect(list.head?.data).toBe(2);
+        expect(list.length).toBe(2);
+        list.shift();
+        expect(list.head?.data).toBe(3);
+        expect(list.length).toBe(1);
+        list.shift();
+        expect(list.head).toBeNull();
+        expect(list.tail).toBeNull();
+        expect(list.length).toBe(0);
+    });
 });

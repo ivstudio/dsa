@@ -48,4 +48,19 @@ export class DoublyLinkedList<T> {
         this.length--;
         return node;
     }
+    shift() {
+        if (!this.head) return null;
+        if (this.head === this.tail) {
+            const node = this.head;
+            this.head = null;
+            this.tail = null;
+            this.length--;
+            return node;
+        }
+        const node = this.head;
+        this.head = this.head.next;
+        this.head!.prev = null;
+        this.length--;
+        return node;
+    }
 }
