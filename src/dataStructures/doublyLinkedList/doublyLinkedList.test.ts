@@ -161,4 +161,33 @@ describe('DoublyLinkedList', () => {
         expect(list.tail).toBeNull();
         expect(list.length).toBe(0);
     });
+    it('should add a node to the beginning of an empty list', () => {
+        list.unshift(1);
+        expect(list.head?.data).toBe(1);
+        expect(list.tail?.data).toBe(1);
+        expect(list.length).toBe(1);
+    });
+
+    it('should add a node to the beginning of a non-empty list', () => {
+        list.unshift(1);
+        list.unshift(2);
+        expect(list.head?.data).toBe(2);
+        expect(list.tail?.data).toBe(1);
+        expect(list.head?.next?.data).toBe(1);
+        expect(list.tail?.prev?.data).toBe(2);
+        expect(list.length).toBe(2);
+    });
+
+    it('should maintain correct order of nodes when adding to the beginning', () => {
+        list.unshift(1);
+        list.unshift(2);
+        list.unshift(3);
+        expect(list.head?.data).toBe(3);
+        expect(list.head?.next?.data).toBe(2);
+        expect(list.head?.next?.next?.data).toBe(1);
+        expect(list.tail?.data).toBe(1);
+        expect(list.tail?.prev?.data).toBe(2);
+        expect(list.tail?.prev?.prev?.data).toBe(3);
+        expect(list.length).toBe(3);
+    });
 });

@@ -63,4 +63,16 @@ export class DoublyLinkedList<T> {
         this.length--;
         return node;
     }
+    unshift(data: T) {
+        const newNode = new LinkedListNode(data);
+        if (!this.head) {
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            newNode.next = this.head;
+            this.head.prev = newNode;
+            this.head = newNode;
+        }
+        this.length++;
+    }
 }
