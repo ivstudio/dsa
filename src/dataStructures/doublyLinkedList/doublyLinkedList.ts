@@ -75,4 +75,13 @@ export class DoublyLinkedList<T> {
         }
         this.length++;
     }
+
+    get(index: number) {
+        if (index < 0 || index >= this.length) return null;
+        let current = this.head;
+        for (let i = 0; i < index; i++) {
+            current = current!.next;
+        }
+        return current;
+    }
 }

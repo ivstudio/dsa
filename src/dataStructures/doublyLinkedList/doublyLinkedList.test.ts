@@ -190,4 +190,29 @@ describe('DoublyLinkedList', () => {
         expect(list.tail?.prev?.prev?.data).toBe(3);
         expect(list.length).toBe(3);
     });
+    it('should return null for an out-of-bounds index', () => {
+        list.push(1);
+        list.push(2);
+        list.push(3);
+        expect(list.get(-1)).toBeNull();
+        expect(list.get(3)).toBeNull();
+    });
+
+    it('should return the correct node for a valid index', () => {
+        list.push(1);
+        list.push(2);
+        list.push(3);
+        expect(list.get(0)?.data).toBe(1);
+        expect(list.get(1)?.data).toBe(2);
+        expect(list.get(2)?.data).toBe(3);
+    });
+
+    it('should return the correct node for a valid index in a single-node list', () => {
+        list.push(1);
+        expect(list.get(0)?.data).toBe(1);
+    });
+
+    it('should return null for an out-of-bounds index in an empty list', () => {
+        expect(list.get(0)).toBeNull();
+    });
 });
