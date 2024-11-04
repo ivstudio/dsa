@@ -21,31 +21,42 @@
 
 */
 
-// Solution 1
-// Time Complexity: O(n)
-// Space Complexity: O(1)
-
+/**
+ * Merges two sorted arrays into one sorted array in-place.
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
+ *
+ * - Initialize pointers for nums1 and nums2:
+ *   - nums1Pointer: Pointer for the last element in the valid part of nums1
+ *   - nums2Pointer: Pointer for the last element in nums2
+ *   - mergePointer: Pointer for the last position in nums1 (which has enough space to hold all elements from both arrays)
+ * - Iterate while there are elements in nums2 to be processed:
+ *   - If there are elements in nums1 and the current element in nums1 is greater than the current element in nums2:
+ *     - Place the element from nums1 at the current position in nums1
+ *     - Move the pointer in nums1 to the left
+ *   - Else:
+ *     - Place the element from nums2 at the current position in nums1
+ *     - Move the pointer in nums2 to the left
+ *   - Move the mergePointer to the left
+ */
 export function mergeSortedArray(
     nums1: number[],
     m: number,
     nums2: number[],
     n: number
 ): void {
-    // Initialize pointers for nums1 and nums2
-    let nums1Pointer = m - 1; // Pointer for the last element in the valid part of nums1
-    let nums2Pointer = n - 1; // Pointer for the last element in nums2
-    let mergePointer = m + n - 1; // Pointer for the last position in nums1 (which has enough space to hold all elements from both arrays)
+    let nums1Pointer = m - 1;
+    let nums2Pointer = n - 1;
+    let mergePointer = m + n - 1;
 
-    // Iterate while there are elements in nums2 to be processed
     while (nums2Pointer >= 0) {
-        // If there are elements in nums1 and the current element in nums1 is greater than the current element in nums2
         if (nums1Pointer >= 0 && nums1[nums1Pointer] > nums2[nums2Pointer]) {
-            nums1[mergePointer] = nums1[nums1Pointer]; // Place the element from nums1 at the current position in nums1
-            nums1Pointer--; // Move the pointer in nums1 to the left
+            nums1[mergePointer] = nums1[nums1Pointer];
+            nums1Pointer--;
         } else {
-            nums1[mergePointer] = nums2[nums2Pointer]; // Place the element from nums2 at the current position in nums1
-            nums2Pointer--; // Move the pointer in nums2 to the left
+            nums1[mergePointer] = nums2[nums2Pointer];
+            nums2Pointer--;
         }
-        mergePointer--; // Move the pointer in nums1 to the left
+        mergePointer--;
     }
 }

@@ -3,14 +3,38 @@
  bubbleSort that implements the Bubble Sort algorithm f
  or sorting an array of numbers in ascending order.
  */
+// export function bubbleSort(array: number[]) {
+//     for (let i = array.length - 1; i > 0; i--) {
+//         for (let j = 0; j < i; j++) {
+//             if (array[j] > array[j + 1]) {
+//                 let temp = array[j];
+//                 array[j] = array[j + 1];
+//                 array[j + 1] = temp;
+//             }
+//         }
+//     }
+//     return array;
+// }
+
+/**
+ *
+ * Optimized Bubble Sort
+ *
+ */
 export function bubbleSort(array: number[]) {
-    for (let i = array.length - 1; i > 0; i--) {
-        for (let j = 0; j < i; j++) {
+    let isSorted = false;
+    for (let i = array.length; i > 0; i--) {
+        isSorted = true;
+        for (let j = 0; j < i - 1; j++) {
             if (array[j] > array[j + 1]) {
                 let temp = array[j];
                 array[j] = array[j + 1];
                 array[j + 1] = temp;
+                isSorted = false;
             }
+        }
+        if (isSorted) {
+            return array;
         }
     }
     return array;
