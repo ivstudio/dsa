@@ -1,8 +1,13 @@
 # JavaScript Data Structures and Algorithms (DSA)
 
-## Overview
+## Description
 
-This repository is a study and exercise guide for data structures and algorithms (DSA). It features TypeScript code implementations, test cases, and utilities to streamline the process of writing and testing solutions effectively.
+This repository is a hands-on guide for learning data structures and algorithms (DSA). It includes TypeScript code examples, test cases, and helpful utilities to make writing and testing solutions easier and more effective.
+
+### Testing
+
+This project uses Jest for testing each solution to ensure everything works as expected.
+To run all tests, simply use: `npm run test`.
 
 ### Table of Contents
 
@@ -42,11 +47,6 @@ This repository is a study and exercise guide for data structures and algorithms
     - [Interval](/src/exercises/closures/interval/)
   - [Promise Time Limit](/src/exercises/promiseTimeLimit)  
 
-### Testing
-
-I’m using [Jest](https://jestjs.io/) to test the solutions.
-
-- To run all the tests: `npm run test`
 
 ### Folder Structure
 
@@ -79,4 +79,5 @@ root/
 
 ### Resources
 
-- [visualgo](https://visualgo.net/en)
+- [VisuAlgo](https://visualgo.net/en)
+- [Sorting Algorithms Animations](https://www.toptal.com/developers/sorting-algorithms)
