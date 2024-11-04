@@ -27,9 +27,9 @@
  * Space Complexity: O(1)
  *
  * - Initialize pointers for nums1 and nums2:
- *   - nums1Pointer: Pointer for the last element in the valid part of nums1
- *   - nums2Pointer: Pointer for the last element in nums2
- *   - mergePointer: Pointer for the last position in nums1 (which has enough space to hold all elements from both arrays)
+ *   - first: Pointer for the last element in the valid part of nums1
+ *   - second: Pointer for the last element in nums2
+ *   - i: Pointer for the last position in nums1 (which has enough space to hold all elements from both arrays)
  * - Iterate while there are elements in nums2 to be processed:
  *   - If there are elements in nums1 and the current element in nums1 is greater than the current element in nums2:
  *     - Place the element from nums1 at the current position in nums1
@@ -37,26 +37,32 @@
  *   - Else:
  *     - Place the element from nums2 at the current position in nums1
  *     - Move the pointer in nums2 to the left
- *   - Move the mergePointer to the left
+ *   - Move the i pointer to the left
+ *
+ *  Explanation: https://www.youtube.com/watch?v=FhIhUy8bZww
  */
+
 export function mergeSortedArray(
     nums1: number[],
     m: number,
     nums2: number[],
     n: number
 ): void {
-    let nums1Pointer = m - 1;
-    let nums2Pointer = n - 1;
-    let mergePointer = m + n - 1;
+    let first = m - 1;
+    let second = n - 1;
+    let i = m + n - 1;
 
-    while (nums2Pointer >= 0) {
-        if (nums1Pointer >= 0 && nums1[nums1Pointer] > nums2[nums2Pointer]) {
-            nums1[mergePointer] = nums1[nums1Pointer];
-            nums1Pointer--;
+    while (second >= 0) {
+        let fVal = nums1[first];
+        let sVal = nums2[second];
+
+        if (fVal > sVal) {
+            nums1[i] = fVal;
+            first--;
         } else {
-            nums1[mergePointer] = nums2[nums2Pointer];
-            nums2Pointer--;
+            nums1[i] = sVal;
+            second--;
         }
-        mergePointer--;
+        i--;
     }
 }
