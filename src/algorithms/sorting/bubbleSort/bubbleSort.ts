@@ -21,7 +21,7 @@
  * Optimized Bubble Sort
  *
  */
-export function bubbleSorta(array: number[]) {
+export function bubbleSort(array: number[]) {
     let isSorted = false;
     for (let i = array.length; i > 0; i--) {
         isSorted = true;
