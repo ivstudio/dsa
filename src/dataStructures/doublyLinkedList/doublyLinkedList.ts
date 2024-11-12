@@ -33,6 +33,7 @@ export class DoublyLinkedList<T> {
         }
         this.length++;
     }
+
     pop() {
         if (!this.head) return null;
         if (this.head === this.tail) {
@@ -48,6 +49,7 @@ export class DoublyLinkedList<T> {
         this.length--;
         return node;
     }
+
     shift() {
         if (!this.head) return null;
         if (this.head === this.tail) {
@@ -63,6 +65,7 @@ export class DoublyLinkedList<T> {
         this.length--;
         return node;
     }
+
     unshift(data: T) {
         const newNode = new LinkedListNode(data);
         if (!this.head) {
@@ -83,5 +86,14 @@ export class DoublyLinkedList<T> {
             current = current!.next;
         }
         return current;
+    }
+
+    set(index: number, data: T): boolean {
+        const node = this.get(index);
+        if (node) {
+            node.data = data;
+            return true;
+        }
+        return false;
     }
 }

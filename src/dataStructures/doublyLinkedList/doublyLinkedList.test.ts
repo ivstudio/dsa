@@ -215,4 +215,37 @@ describe('DoublyLinkedList', () => {
     it('should return null for an out-of-bounds index in an empty list', () => {
         expect(list.get(0)).toBeNull();
     });
+
+    it('should set the value of a node at a valid index', () => {
+        list.push(1);
+        list.push(2);
+        list.push(3);
+        expect(list.set(1, 4)).toBe(true);
+        expect(list.get(1)?.data).toBe(4);
+    });
+
+    it('should return false for an invalid index', () => {
+        list.push(1);
+        list.push(2);
+        list.push(3);
+        expect(list.set(3, 4)).toBe(false);
+        expect(list.set(-1, 4)).toBe(false);
+    });
+
+    it('should set the value of the head node', () => {
+        list.push(1);
+        expect(list.set(0, 4)).toBe(true);
+        expect(list.head?.data).toBe(4);
+    });
+
+    it('should set the value of the tail node', () => {
+        list.push(1);
+        list.push(2);
+        expect(list.set(1, 4)).toBe(true);
+        expect(list.tail?.data).toBe(4);
+    });
+
+    it('should handle setting values in an empty list', () => {
+        expect(list.set(0, 4)).toBe(false);
+    });
 });
