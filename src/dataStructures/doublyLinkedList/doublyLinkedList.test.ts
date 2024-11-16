@@ -248,4 +248,60 @@ describe('DoublyLinkedList', () => {
     it('should handle setting values in an empty list', () => {
         expect(list.set(0, 4)).toBe(false);
     });
+
+    it('should remove the first element', () => {
+        const list = new DoublyLinkedList<number>();
+        list.push(1);
+        list.push(2);
+        list.push(3);
+        list.push(4);
+
+        const removedNode = list.remove(0);
+        expect(removedNode?.data).toBe(1);
+        expect(list.length).toBe(3);
+        expect(list.head?.data).toBe(2);
+    });
+
+    it('should remove the last element', () => {
+        const list = new DoublyLinkedList<number>();
+        list.push(1);
+        list.push(2);
+        list.push(3);
+        list.push(4);
+
+        const removedNode = list.remove(3);
+        expect(removedNode?.data).toBe(4);
+        expect(list.length).toBe(3);
+        expect(list.tail?.data).toBe(3);
+    });
+
+    it('should remove an element from the middle', () => {
+        const list = new DoublyLinkedList<number>();
+        list.push(1);
+        list.push(2);
+        list.push(3);
+        list.push(4);
+
+        const removedNode = list.remove(1);
+        expect(removedNode?.data).toBe(2);
+        expect(list.length).toBe(3);
+        expect(list.head?.next?.data).toBe(3);
+        expect(list.head?.next?.prev?.data).toBe(1);
+    });
+
+    it('should return null for an invalid index', () => {
+        const list = new DoublyLinkedList<number>();
+        list.push(1);
+        list.push(2);
+        list.push(3);
+        list.push(4);
+
+        const removedNode = list.remove(-1);
+        expect(removedNode).toBeNull();
+        expect(list.length).toBe(4);
+
+        const removedNode2 = list.remove(4);
+        expect(removedNode2).toBeNull();
+        expect(list.length).toBe(4);
+    });
 });
