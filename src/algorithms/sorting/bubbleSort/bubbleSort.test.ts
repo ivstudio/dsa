@@ -2,9 +2,9 @@ import { bubbleSort } from './bubbleSort';
 
 describe('bubbleSort', () => {
     it('should sort an array of numbers in ascending order', () => {
-        const array = [5, 3, 8, 4, 2];
+        const array = [1, 11, 5, 22, 33, 3, 8, 4, 2];
         const sortedArray = bubbleSort(array);
-        expect(sortedArray).toEqual([2, 3, 4, 5, 8]);
+        expect(sortedArray).toEqual([1, 2, 3, 4, 5, 8, 11, 22, 33]);
     });
 
     it('should handle an empty array', () => {
