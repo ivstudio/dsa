@@ -1,38 +1,47 @@
 import { removeDuplicates } from './removeDuplicatesfromSortedArray';
 
 describe('removeDuplicates', () => {
-    it('should return the length of array with no duplicates', () => {
-        const nums = [1, 2, 3, 4, 5];
+    it('should remove duplicates from a sorted array', () => {
+        const nums = [1, 1, 2];
+        const expectedLength = 2;
+        const expectedNums = [1, 2];
         const length = removeDuplicates(nums);
-        expect(length).toBe(5);
-        expect(nums.slice(0, length)).toEqual([1, 2, 3, 4, 5]);
+        expect(length).toBe(expectedLength);
+        expect(nums.slice(0, length)).toEqual(expectedNums);
     });
 
-    it('should return the length of array with some duplicates', () => {
-        const nums = [1, 1, 2, 2, 3];
+    it('should handle an array with no duplicates', () => {
+        const nums = [1, 2, 3];
+        const expectedLength = 3;
+        const expectedNums = [1, 2, 3];
         const length = removeDuplicates(nums);
-        expect(length).toBe(3);
-        expect(nums.slice(0, length)).toEqual([1, 2, 3]);
+        expect(length).toBe(expectedLength);
+        expect(nums.slice(0, length)).toEqual(expectedNums);
     });
 
-    it('should return the length of array with all duplicates', () => {
-        const nums = [1, 1, 1, 1, 1];
-        const length = removeDuplicates(nums);
-        expect(length).toBe(1);
-        expect(nums.slice(0, length)).toEqual([1]);
-    });
-
-    it('should return the length of an empty array', () => {
+    it('should handle an empty array', () => {
         const nums: number[] = [];
+        const expectedLength = 0;
         const length = removeDuplicates(nums);
-        expect(length).toBe(0);
+        expect(length).toBe(expectedLength);
         expect(nums.slice(0, length)).toEqual([]);
     });
 
-    it('should return the length of array with a single element', () => {
-        const nums = [1];
+    it('should handle an array with all duplicates', () => {
+        const nums = [1, 1, 1, 1];
+        const expectedLength = 1;
+        const expectedNums = [1];
         const length = removeDuplicates(nums);
-        expect(length).toBe(1);
-        expect(nums.slice(0, length)).toEqual([1]);
+        expect(length).toBe(expectedLength);
+        expect(nums.slice(0, length)).toEqual(expectedNums);
+    });
+
+    it('should handle an array with multiple duplicates', () => {
+        const nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
+        const expectedLength = 5;
+        const expectedNums = [0, 1, 2, 3, 4];
+        const length = removeDuplicates(nums);
+        expect(length).toBe(expectedLength);
+        expect(nums.slice(0, length)).toEqual(expectedNums);
     });
 });

@@ -46,26 +46,29 @@
 
 /*----------------------------------------*
  Step-by-step explanation:
-1. Initialize a variable `k` to keep track of the 
-   position of the last unique element.
-2. Iterate over each element in the array using the index `i`.
-3. If the current element `nums[i]` is different 
-   from the element at position `k` (`nums[k]`),
+1. Check if the array is empty. If it is, return 0.
+2. Initialize a variable `k` to 1 to keep track of 
+the position of the last unique element.
+3. Iterate over each element in the array starting 
+from the second element (index 1) using the index `i`.
+4. If the current element `nums[i]` is different from 
+the previous element `nums[i - 1]`,
    it means `nums[i]` is a new unique element.
-4. Increment `k` to move to the next position.
-5. Place the new unique element `nums[i]` at the position `k` in the array.
-6. After the loop completes, return `k + 1`, which represents
-   the new length of the array without duplicates.
+5. Place the new unique element `nums[i]` at the 
+position `k` in the array.
+6. Increment `k` to move to the next position.
+7. After the loop completes, return `k`, which represents 
+the new length of the array without duplicates.
 *----------------------------------------*/
 
 export function removeDuplicates(nums: number[]): number {
     if (nums.length === 0) return 0;
-    let k = 0;
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] !== nums[k]) {
-            k++;
+    let k = 1;
+    for (let i = 1; i < nums.length; i++) {
+        if (nums[i] !== nums[i - 1]) {
             nums[k] = nums[i];
+            k++;
         }
     }
-    return k + 1;
+    return k;
 }
