@@ -1,4 +1,5 @@
 /*
+   Leetcode Problem: 209.
    Minimum Size Subarray Sum
    Given an array of positive integers nums and a positive 
    integer target, return the minimal length of a subarray
@@ -19,6 +20,10 @@
     Input: target = 11, nums = [1,1,1,1,1,1,1,1]
     Output: 0
 
+    Constraints:
+    1 <= target <= 109
+    1 <= nums.length <= 105
+    1 <= nums[i] <= 105
 */
 
 /**
@@ -33,7 +38,7 @@ export function minSubArrayLen(target: number, nums: number[]): number {
     let left = 0;
     let sum = 0;
     let minLength = Infinity;
-    
+
     for (let right = 0; right < nums.length; right++) {
         sum += nums[right];
         while (sum >= target) {
@@ -42,5 +47,6 @@ export function minSubArrayLen(target: number, nums: number[]): number {
             left++;
         }
     }
+
     return minLength === Infinity ? 0 : minLength;
 }
