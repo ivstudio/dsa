@@ -28,6 +28,7 @@
 */
 
 export function minWindow(s: string, t: string): string {
+    if (t.length === 0) return '';
     let map = new Map();
 
     for (let i = 0; i < t.length; i++) {
