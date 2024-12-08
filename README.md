@@ -38,6 +38,7 @@ To run all tests, simply use: `npm run test`.
   - [Two Sum](/src/algorithms/twoSum)
 
 - Data Structures
+  - [Binary Search Tree](/src/dataStructures/binarySearchTree/)
   - [Linked List](/src/dataStructures/linkedList)
     - [Add Two Numbers LL](/src/dataStructures/linkedList/addTwoNumbers/)
     - [Merge Two Sorted LL](/src/dataStructures/linkedList//mergeTwoSortedLinkedLists/)
