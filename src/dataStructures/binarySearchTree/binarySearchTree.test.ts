@@ -43,4 +43,31 @@ describe('BinarySearchTree', () => {
         expect(bst.root?.right?.left?.data).toBe(13);
         expect(bst.root?.right?.right?.data).toBe(17);
     });
+    it('should return true for existing values', () => {
+        bst.insert(5);
+        bst.insert(3);
+        bst.insert(7);
+        expect(bst.contains(5)).toBe(true);
+        expect(bst.contains(3)).toBe(true);
+        expect(bst.contains(7)).toBe(true);
+    });
+
+    it('should return false for non-existent values', () => {
+        bst.insert(5);
+        bst.insert(3);
+        bst.insert(7);
+        expect(bst.contains(4)).toBe(false);
+        expect(bst.contains(6)).toBe(false);
+        expect(bst.contains(8)).toBe(false);
+    });
+
+    it('should return false for an empty tree', () => {
+        expect(bst.contains(5)).toBe(false);
+    });
+
+    it('should handle edge case with single node tree', () => {
+        bst.insert(5);
+        expect(bst.contains(5)).toBe(true);
+        expect(bst.contains(3)).toBe(false);
+    });
 });
