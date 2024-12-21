@@ -22,8 +22,8 @@ export class BinarySearchTree {
         this.root = null;
     }
 
-    insert(data: number) {
-        const newNode = new TreeNode(data);
+    insert(value: number) {
+        const newNode = new TreeNode(value);
         if (!this.root) {
             this.root = newNode;
             return this;
@@ -31,8 +31,8 @@ export class BinarySearchTree {
 
         let current = this.root;
         while (true) {
-            if (data === current.data) return undefined;
-            if (data < current.data) {
+            if (newNode.data === current.data) return undefined;
+            if (newNode.data < current.data) {
                 if (!current.left) {
                     current.left = newNode;
                     return this;
